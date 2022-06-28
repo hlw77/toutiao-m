@@ -2,7 +2,7 @@
   <div class="login-container">
     <!-- 导航栏S  -->
     <van-nav-bar title="登录">
-      <van-icon name="cross" slot="left" />
+      <van-icon name="cross" slot="left" @click="$router.back()" />
     </van-nav-bar>
     <!-- 导航栏E  -->
     <!-- 表单S  -->
@@ -71,8 +71,8 @@ import { getSmsCode, login } from '@/api/login'
 export default {
   data () {
     return {
-      mobile: '',
-      code: '',
+      mobile: '13955967728',
+      code: '246810',
       time: 5 * 1000,
       isCountDownShow: false
     }
@@ -85,6 +85,8 @@ export default {
       try {
         const res = await login(value)
         this.$store.commit('setUser', res.data.data)
+        // 跳转到关于我的页面
+        this.$router.push({ name: 'my' })
       } catch (err) {
         console.log(err)
       }

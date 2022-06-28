@@ -12,7 +12,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/login'
+    redirect: '/layout/my'
   },
   {
     path: '/layout',
@@ -28,6 +28,7 @@ const routes = [
       path: 'video',
       component: Video
     }, {
+      name: 'my',
       path: 'my',
       component: My
     }]
