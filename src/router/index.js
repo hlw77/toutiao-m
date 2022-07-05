@@ -12,7 +12,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/layout/my'
+    redirect: '/layout/home'
   },
   {
     path: '/layout',

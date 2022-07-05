@@ -10,6 +10,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user: null
+
   },
   getters: {
   },
@@ -17,6 +18,7 @@ export default new Vuex.Store({
     setUser (state, payload) {
       state.user = payload
     }
+
   },
   actions: {
   },
